@@ -13,8 +13,11 @@
  */
 
 use ApiExhibitionManager\RedirectToRestApiOnFrontend\Redirector\Exiter\Exiter;
+use ApiExhibitionManager\RedirectToRestApiOnFrontend\Redirector\HeaderDispatcher\HeaderDispatcher;
 use ApiExhibitionManager\RedirectToRestApiOnFrontend\Redirector\Redirector;
 use ApiExhibitionManager\RedirectToRestApiOnFrontend\RedirectToRestApiOnFrontend;
+use ApiExhibitionManager\RedirectToRestApiOnFrontend\RequestUriProvider\RequestUriProvider;
+use ApiExhibitionManager\PostTypeRegistrar\PostTypeRegistrar;
 use WpService\Implementations\NativeWpService;
 
  // Protect agains direct file access
@@ -62,4 +65,18 @@ $wpService = new NativeWpService();
  * Redirects users to the WordPress REST API URL if they are not in the admin area
  * and are not already visiting the REST API or any of its sub-routes.
  */
-(new RedirectToRestApiOnFrontend($wpService, new Redirector(new Exiter())))->addHooks();
+(new RedirectToRestApiOnFrontend(
+    $wpService,
+    new RequestUriProvider($wpService),
+    new Redirector(new HeaderDispatcher(), new Exiter())
+))->addHooks();
+
+/**
+ * Registers the exhibition post type.
+ */
+(new PostTypeRegistrar(
+    'exhibition',
+    $wpService->__('Exhibition', 'api-exhibition-manager'),
+    $wpService->__('Exhibitions', 'api-exhibition-manager'),
+    $wpService
+))->addHooks();

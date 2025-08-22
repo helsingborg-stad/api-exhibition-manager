@@ -2,7 +2,7 @@
 
 namespace ApiExhibitionManager\RedirectToRestApiOnFrontend\Redirector\HeaderDispatcher;
 
-class HeaderDispatcher
+class HeaderDispatcher implements HeaderDispatcherInterface
 {
     /**
      * @inheritDoc
