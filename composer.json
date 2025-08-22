@@ -33,7 +33,7 @@
     },
     "scripts": {
         "test": "phpunit --no-coverage --testdox",
-        "test:coverage": "XDEBUG_MODE=coverage phpunit --testdox",
+        "test:coverage": "XDEBUG_MODE=coverage phpunit --coverage-clover .coverage/clover.xml",
         "lint": "vendor/bin/phpcs",
         "lint:changed": "vendor/bin/phpcs-changed origin/main",
         "fix": "vendor/bin/phpcbf",
@@ -41,7 +41,8 @@
     },
     "config": {
         "allow-plugins": {
-            "dealerdirect/phpcodesniffer-composer-installer": true
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "infection/extension-installer": true
         }
     }
 }

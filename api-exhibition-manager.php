@@ -12,7 +12,9 @@
  * Domain Path:       /languages
  */
 
-use AcfService\Implementations\NativeAcfService;
+use ApiExhibitionManager\RedirectToRestApiOnFrontend\Redirector\Exiter\Exiter;
+use ApiExhibitionManager\RedirectToRestApiOnFrontend\Redirector\Redirector;
+use ApiExhibitionManager\RedirectToRestApiOnFrontend\RedirectToRestApiOnFrontend;
 use WpService\Implementations\NativeWpService;
 
  // Protect agains direct file access
@@ -54,5 +56,10 @@ $acfExportManager->autoExport(array(
 ));
 $acfExportManager->import();
 
-// Start application
-new \ApiExhibitionManager\App(new NativeWpService(), new NativeAcfService());
+$wpService = new NativeWpService();
+
+/**
+ * Redirects users to the WordPress REST API URL if they are not in the admin area
+ * and are not already visiting the REST API or any of its sub-routes.
+ */
+(new RedirectToRestApiOnFrontend($wpService, new Redirector(new Exiter())))->addHooks();
