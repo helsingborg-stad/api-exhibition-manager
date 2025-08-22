@@ -37,7 +37,10 @@
         "lint": "vendor/bin/phpcs",
         "lint:changed": "vendor/bin/phpcs-changed origin/main",
         "fix": "vendor/bin/phpcbf",
-        "fix:changed": "vendor/bin/phpcbf-changed origin/main"
+        "fix:changed": "vendor/bin/phpcbf-changed origin/main",
+        "make-pot": "wp i18n make-pot . languages/api-exhibition-manager.pot --exclude=vendor",
+        "update-po": "wp i18n update-po languages/api-exhibition-manager.pot languages/api-exhibition-manager-sv_SE.po",
+        "make-mo": "wp i18n make-mo languages/api-exhibition-manager-sv_SE.po languages/api-exhibition-manager-sv_SE.mo"
     },
     "config": {
         "allow-plugins": {

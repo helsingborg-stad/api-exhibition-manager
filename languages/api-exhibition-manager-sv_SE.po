@@ -1,0 +1,109 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-08-22T12:47:01+00:00\n"
+"PO-Revision-Date: 2025-08-22T12:47:01+00:00\n"
+"Language: \n"
+
+#. Plugin Name of the plugin
+#: api-exhibition-manager.php
+msgid "Api Exhibition Manager"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: api-exhibition-manager.php
+msgid "https://github.com/helsingborg-stad/api-exhibition-manager"
+msgstr ""
+
+#. Description of the plugin
+#: api-exhibition-manager.php
+msgid "Creates WordPress Rest API endpoint for exhibitions"
+msgstr ""
+
+#. Author of the plugin
+#: api-exhibition-manager.php
+msgid "Thor Brink"
+msgstr ""
+
+#. Author URI of the plugin
+#: api-exhibition-manager.php
+msgid "https://github.com/helsingborg-stad"
+msgstr ""
+
+#: api-exhibition-manager.php:79
+msgid "Exhibition"
+msgstr "Utställning"
+
+#: api-exhibition-manager.php:80
+msgid "Exhibitions"
+msgstr "Utställningar"
+
+#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:47
+msgid "Add New"
+msgstr "Lägg till ny"
+
+#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:48
+#, php-format
+msgid "Add New %s"
+msgstr "Lägg till ny %s"
+
+#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:49
+#, php-format
+msgid "New %s"
+msgstr "Ny %s"
+
+#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:50
+#, php-format
+msgid "Edit %s"
+msgstr "Redigera %s"
+
+#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:51
+#, php-format
+msgid "View %s"
+msgstr "Visa %s"
+
+#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:52
+#, php-format
+msgid "All %s"
+msgstr "Alla %s"
+
+#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:53
+#, php-format
+msgid "Search %s"
+msgstr "Sök %s"
+
+#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:54
+#, php-format
+msgid "Parent %s:"
+msgstr "Förälder"
+
+#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:55
+#, php-format
+msgid "No %s found."
+msgstr "Hittade inga %s"
+
+#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:56
+#, php-format
+msgid "No %s found in Trash."
+msgstr "Inga #s hittades i papperskorgen"
+
+#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:57
+#, php-format
+msgid "Insert into %s"
+msgstr "Lägg till i %s"
+
+#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:58
+#, php-format
+msgid "Uploaded to this %s"
+msgstr "Uppladdad till %s"
+
+#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:59
+#, php-format
+msgid "Filter %s list"
+msgstr "Filtrera lista för %s"

@@ -1,0 +1,112 @@
+# Copyright (C) 2025 Thor Brink
+# This file is distributed under the MIT.
+msgid ""
+msgstr ""
+"Project-Id-Version: Api Exhibition Manager\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/api-exhibition-manager\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-08-22T12:52:42+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: api-exhibition-manager\n"
+
+#. Plugin Name of the plugin
+#: api-exhibition-manager.php
+msgid "Api Exhibition Manager"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: api-exhibition-manager.php
+msgid "https://github.com/helsingborg-stad/api-exhibition-manager"
+msgstr ""
+
+#. Description of the plugin
+#: api-exhibition-manager.php
+msgid "Creates WordPress Rest API endpoint for exhibitions"
+msgstr ""
+
+#. Author of the plugin
+#: api-exhibition-manager.php
+msgid "Thor Brink"
+msgstr ""
+
+#. Author URI of the plugin
+#: api-exhibition-manager.php
+msgid "https://github.com/helsingborg-stad"
+msgstr ""
+
+#: api-exhibition-manager.php:79
+msgid "Exhibition"
+msgstr ""
+
+#: api-exhibition-manager.php:80
+msgid "Exhibitions"
+msgstr ""
+
+#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:47
+msgid "Add New"
+msgstr ""
+
+#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:48
+#, php-format
+msgid "Add New %s"
+msgstr ""
+
+#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:49
+#, php-format
+msgid "New %s"
+msgstr ""
+
+#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:50
+#, php-format
+msgid "Edit %s"
+msgstr ""
+
+#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:51
+#, php-format
+msgid "View %s"
+msgstr ""
+
+#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:52
+#, php-format
+msgid "All %s"
+msgstr ""
+
+#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:53
+#, php-format
+msgid "Search %s"
+msgstr ""
+
+#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:54
+#, php-format
+msgid "Parent %s:"
+msgstr ""
+
+#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:55
+#, php-format
+msgid "No %s found."
+msgstr ""
+
+#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:56
+#, php-format
+msgid "No %s found in Trash."
+msgstr ""
+
+#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:57
+#, php-format
+msgid "Insert into %s"
+msgstr ""
+
+#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:58
+#, php-format
+msgid "Uploaded to this %s"
+msgstr ""
+
+#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:59
+#, php-format
+msgid "Filter %s list"
+msgstr ""
