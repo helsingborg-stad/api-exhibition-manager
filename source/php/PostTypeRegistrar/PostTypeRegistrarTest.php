@@ -6,6 +6,7 @@ use PHPUnit\Framework\TestCase;
 use PHPUnit\Framework\Attributes\TestDox;
 use PHPUnit\Framework\MockObject\MockObject;
 use WP_Post_Type;
+use WpService\Contracts\__;
 use WpService\Contracts\AddAction;
 use WpService\Contracts\RegisterPostType;
 
@@ -46,11 +47,12 @@ class PostTypeRegistrarTest extends TestCase
     /**
      * @return AddAction&RegisterPostType&MockObject
      */
-    private function getWpServiceMock(): AddAction&RegisterPostType&MockObject
+    private function getWpServiceMock(): AddAction&RegisterPostType&__&MockObject
     {
         return $this->createMockForIntersectionOfInterfaces([
             AddAction::class,
-            RegisterPostType::class
+            RegisterPostType::class,
+            __::class
         ]);
     }
 }

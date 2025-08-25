@@ -1,0 +1,10 @@
+parameters:
+	bootstrapFiles:
+		- phpstan-bootstrap.php
+	level: max
+	paths:
+		- source/php
+		- api-exhibition-manager.php
+	excludePaths:
+		- source/php/*/*Test.php
+		- source/php/AcfFields/*/*.php

@@ -29,15 +29,9 @@ if (! defined('WPINC')) {
     die;
 }
 
-define('APIEXHIBITIONMANAGER_PATH', plugin_dir_path(__FILE__));
-define('APIEXHIBITIONMANAGER_URL', plugins_url('', __FILE__));
-define('APIEXHIBITIONMANAGER_TEMPLATE_PATH', APIEXHIBITIONMANAGER_PATH . 'templates/');
-
-load_plugin_textdomain('api-exhibition-manager', false, plugin_basename(dirname(__FILE__)) . '/languages');
-
 // Autoload from plugin
-if (file_exists(APIEXHIBITIONMANAGER_PATH . 'vendor/autoload.php')) {
-    require_once APIEXHIBITIONMANAGER_PATH . 'vendor/autoload.php';
+if (file_exists(__DIR__ . '/vendor/autoload.php')) {
+    require_once __DIR__ . '/vendor/autoload.php';
 }
 
 // Autoload from ABSPATH
@@ -45,14 +39,15 @@ if (file_exists(dirname(ABSPATH) . '/vendor/autoload.php')) {
     require_once dirname(ABSPATH) . '/vendor/autoload.php';
 }
 
-require_once APIEXHIBITIONMANAGER_PATH . 'source/php/Vendor/Psr4ClassLoader.php';
-require_once APIEXHIBITIONMANAGER_PATH . 'Public.php';
+$wpService = new NativeWpService();
 
-// Instantiate and register the autoloader
-$loader = new \ApiExhibitionManager\Vendor\Psr4ClassLoader();
-$loader->addPrefix('ApiExhibitionManager', APIEXHIBITIONMANAGER_PATH);
-$loader->addPrefix('ApiExhibitionManager', APIEXHIBITIONMANAGER_PATH . 'source/php/');
-$loader->register();
+define('APIEXHIBITIONMANAGER_PATH', $wpService->pluginDirPath(__FILE__));
+define('APIEXHIBITIONMANAGER_URL', $wpService->pluginsUrl('', __FILE__));
+define('APIEXHIBITIONMANAGER_TEMPLATE_PATH', APIEXHIBITIONMANAGER_PATH . 'templates/');
+
+$wpService->loadPluginTextdomain('api-exhibition-manager', false, $wpService->pluginBasename(dirname(__FILE__)) . '/languages');
+
+require_once __DIR__ . '/Public.php';
 
 // Acf auto import and export
 $acfExportManager = new \AcfExportManager\AcfExportManager();
@@ -63,8 +58,6 @@ $acfExportManager->autoExport(array(
     'exhibition' => 'group_68a837bcde3c7',
 ));
 $acfExportManager->import();
-
-$wpService = new NativeWpService();
 
 /**
  * Redirects users to the WordPress REST API URL if they are not in the admin area

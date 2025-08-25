@@ -13,6 +13,11 @@ class GutenbergDisabler implements HookableInterface
 
     public function addHooks(): void
     {
-        $this->wpService->addFilter('use_block_editor_for_post_type', '__return_false');
+        $this->wpService->addFilter('use_block_editor_for_post_type', [$this, 'returnFalse']);
+    }
+
+    public function returnFalse(): false
+    {
+        return false;
     }
 }
