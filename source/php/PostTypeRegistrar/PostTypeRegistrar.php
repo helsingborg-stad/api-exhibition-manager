@@ -14,7 +14,7 @@ class PostTypeRegistrar implements HookableInterface
         private string $singularLabel,
         private string $pluralLabel,
         private AddAction&RegisterPostType $wpService,
-        private $postTypeArgs = []
+        private array $postTypeArgs = []
     ) {
         $this->addHooks();
     }

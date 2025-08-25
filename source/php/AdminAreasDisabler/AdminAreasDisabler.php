@@ -28,7 +28,7 @@ class AdminAreasDisabler implements HookableInterface
         $this->wpService->removeMenuPage('themes.php');
     }
 
-    public function redirectDashboard($currentScreen): void
+    public function redirectDashboard(): void
     {
         if ($this->isDashboard()) {
             $this->wpService->wpRedirect(admin_url('edit.php?post_type=exhibition'));

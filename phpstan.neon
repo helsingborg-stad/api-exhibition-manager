@@ -1,0 +1,9 @@
+parameters:
+	bootstrapFiles:
+		- phpstan-bootstrap.php
+	level: 4
+	paths:
+		- source/php
+		- api-exhibition-manager.php
+	excludePaths:
+		- source/php/*/*Test.php

@@ -29,7 +29,8 @@
     "require-dev": {
         "helsingborg-stad/phpcs": "^0.2.2",
         "phpunit/phpunit": "^11.5",
-        "php-stubs/wordpress-stubs": "^6.8"
+        "php-stubs/wordpress-stubs": "^6.8",
+        "phpstan/phpstan": "^2.1"
     },
     "scripts": {
         "test": "phpunit --no-coverage --testdox",
@@ -40,7 +41,8 @@
         "fix:changed": "vendor/bin/phpcbf-changed origin/main",
         "make-pot": "wp i18n make-pot . languages/api-exhibition-manager.pot --exclude=vendor",
         "update-po": "wp i18n update-po languages/api-exhibition-manager.pot languages/api-exhibition-manager-sv_SE.po",
-        "make-mo": "wp i18n make-mo languages/api-exhibition-manager-sv_SE.po languages/api-exhibition-manager-sv_SE.mo"
+        "make-mo": "wp i18n make-mo languages/api-exhibition-manager-sv_SE.po languages/api-exhibition-manager-sv_SE.mo",
+        "phpstan": "vendor/bin/phpstan analyze --memory-limit=512M"
     },
     "config": {
         "allow-plugins": {
