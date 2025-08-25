@@ -45,8 +45,8 @@ if (file_exists(dirname(ABSPATH) . '/vendor/autoload.php')) {
     require_once dirname(ABSPATH) . '/vendor/autoload.php';
 }
 
-require_once APIEXHIBITIONMANAGER_PATH . 'source/php/Vendor/Psr4ClassLoader.php';
-require_once APIEXHIBITIONMANAGER_PATH . 'Public.php';
+require_once __DIR__ . '/source/php/Vendor/Psr4ClassLoader.php';
+require_once __DIR__ . '/Public.php';
 
 // Instantiate and register the autoloader
 $loader = new \ApiExhibitionManager\Vendor\Psr4ClassLoader();
