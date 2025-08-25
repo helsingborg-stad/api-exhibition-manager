@@ -45,14 +45,7 @@ if (file_exists(dirname(ABSPATH) . '/vendor/autoload.php')) {
     require_once dirname(ABSPATH) . '/vendor/autoload.php';
 }
 
-require_once __DIR__ . '/source/php/Vendor/Psr4ClassLoader.php';
 require_once __DIR__ . '/Public.php';
-
-// Instantiate and register the autoloader
-$loader = new \ApiExhibitionManager\Vendor\Psr4ClassLoader();
-$loader->addPrefix('ApiExhibitionManager', APIEXHIBITIONMANAGER_PATH);
-$loader->addPrefix('ApiExhibitionManager', APIEXHIBITIONMANAGER_PATH . 'source/php/');
-$loader->register();
 
 // Acf auto import and export
 $acfExportManager = new \AcfExportManager\AcfExportManager();
