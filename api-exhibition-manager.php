@@ -10,6 +10,8 @@
  * License URI:       https://opensource.org/licenses/MIT
  * Text Domain:       api-exhibition-manager
  * Domain Path:       /languages
+ * 
+ * phpcs:ignoreFile PSR1.Files.SideEffects.FoundWithSymbols
  */
 
 use ApiExhibitionManager\AdminAreasDisabler\AdminAreasDisabler;
