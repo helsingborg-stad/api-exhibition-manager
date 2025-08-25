@@ -13,13 +13,14 @@ class RequestUriProvider implements RequestUriProviderInterface
 
     public function getRequestUri(): string
     {
-        if (!isset($_SERVER['REQUEST_URI'])) {
+        if (!isset($_SERVER['REQUEST_URI']) || !is_string($_SERVER['REQUEST_URI'])) {
             return '';
         }
 
         // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.MissingUnslash, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
         $unslashedUri = $this->wpService->wpUnslash($_SERVER['REQUEST_URI']);
 
+        // @phpstan-ignore argument.type
         return $this->wpService->sanitizeTextField($unslashedUri);
     }
 }

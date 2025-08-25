@@ -9,6 +9,13 @@ use WpService\Contracts\RegisterPostType;
 
 class PostTypeRegistrar implements HookableInterface
 {
+    /**
+     * @param string $postType
+     * @param string $singularLabel
+     * @param string $pluralLabel
+     * @param AddAction&RegisterPostType $wpService
+     * @param array<string, mixed> $postTypeArgs
+     */
     public function __construct(
         private string $postType,
         private string $singularLabel,
@@ -29,6 +36,11 @@ class PostTypeRegistrar implements HookableInterface
         $this->wpService->registerPostType($this->postType, $this->getArgs());
     }
 
+    /**
+     * Returns the arguments for registering the post type.
+     *
+     * @return array<string, mixed>
+     */
     private function getArgs(): array
     {
         return array_merge(
@@ -41,6 +53,11 @@ class PostTypeRegistrar implements HookableInterface
         );
     }
 
+    /**
+     * Returns the labels array for the custom post type.
+     *
+     * @return array<string, string>
+     */
     private function getLabels(): array
     {
         return [

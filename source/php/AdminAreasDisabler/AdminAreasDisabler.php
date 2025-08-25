@@ -42,7 +42,7 @@ class AdminAreasDisabler implements HookableInterface
             return false;
         }
 
-        if (!isset($_SERVER['REQUEST_URI'])) {
+        if (!isset($_SERVER['REQUEST_URI']) || !is_string($_SERVER['REQUEST_URI'])) {
             return false;
         }
 
