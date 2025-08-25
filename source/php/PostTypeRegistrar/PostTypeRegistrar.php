@@ -14,6 +14,7 @@ class PostTypeRegistrar implements HookableInterface
         private string $singularLabel,
         private string $pluralLabel,
         private AddAction&RegisterPostType $wpService,
+        private $postTypeArgs = []
     ) {
         $this->addHooks();
     }
@@ -30,11 +31,14 @@ class PostTypeRegistrar implements HookableInterface
 
     private function getArgs(): array
     {
-        return [
+        return array_merge(
+            [
             'labels'       => $this->getLabels(),
             'public'       => true,
             'show_in_rest' => true
-        ];
+            ],
+            $this->postTypeArgs
+        );
     }
 
     private function getLabels(): array

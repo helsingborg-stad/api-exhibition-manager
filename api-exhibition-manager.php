@@ -12,6 +12,8 @@
  * Domain Path:       /languages
  */
 
+use ApiExhibitionManager\AdminAreasDisabler\AdminAreasDisabler;
+use ApiExhibitionManager\GutenbergDisabler\GutenbergDisabler;
 use ApiExhibitionManager\RedirectToRestApiOnFrontend\Redirector\Exiter\Exiter;
 use ApiExhibitionManager\RedirectToRestApiOnFrontend\Redirector\HeaderDispatcher\HeaderDispatcher;
 use ApiExhibitionManager\RedirectToRestApiOnFrontend\Redirector\Redirector;
@@ -73,11 +75,22 @@ $wpService = new NativeWpService();
 ))->addHooks();
 
 /**
+ * Disables certain admin areas that are not relevant for this plugin.
+ */
+(new AdminAreasDisabler($wpService))->addHooks();
+
+/**
+ * Disables Gutenberg editor for all post types
+ */
+(new GutenbergDisabler($wpService))->addHooks();
+
+/**
  * Registers the exhibition post type.
  */
 (new PostTypeRegistrar(
     'exhibition',
     $wpService->__('Exhibition', 'api-exhibition-manager'),
     $wpService->__('Exhibitions', 'api-exhibition-manager'),
-    $wpService
+    $wpService,
+    ['menu_icon' => 'dashicons-calendar-alt']
 ))->addHooks();
