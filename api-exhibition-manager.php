@@ -29,6 +29,16 @@ if (! defined('WPINC')) {
     die;
 }
 
+// Autoload from plugin
+if (file_exists(__DIR__ . '/vendor/autoload.php')) {
+    require_once __DIR__ . '/vendor/autoload.php';
+}
+
+// Autoload from ABSPATH
+if (file_exists(dirname(ABSPATH) . '/vendor/autoload.php')) {
+    require_once dirname(ABSPATH) . '/vendor/autoload.php';
+}
+
 $wpService = new NativeWpService();
 
 define('APIEXHIBITIONMANAGER_PATH', $wpService->pluginDirPath(__FILE__));
@@ -36,16 +46,6 @@ define('APIEXHIBITIONMANAGER_URL', $wpService->pluginsUrl('', __FILE__));
 define('APIEXHIBITIONMANAGER_TEMPLATE_PATH', APIEXHIBITIONMANAGER_PATH . 'templates/');
 
 $wpService->loadPluginTextdomain('api-exhibition-manager', false, $wpService->pluginBasename(dirname(__FILE__)) . '/languages');
-
-// Autoload from plugin
-if (file_exists(APIEXHIBITIONMANAGER_PATH . 'vendor/autoload.php')) {
-    require_once APIEXHIBITIONMANAGER_PATH . 'vendor/autoload.php';
-}
-
-// Autoload from ABSPATH
-if (file_exists(dirname(ABSPATH) . '/vendor/autoload.php')) {
-    require_once dirname(ABSPATH) . '/vendor/autoload.php';
-}
 
 require_once __DIR__ . '/Public.php';
 
