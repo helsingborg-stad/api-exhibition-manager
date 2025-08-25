@@ -36,74 +36,215 @@ msgstr ""
 msgid "https://github.com/helsingborg-stad"
 msgstr ""
 
-#: api-exhibition-manager.php:79
+#: api-exhibition-manager.php:87
+#: source/php/AcfFields/php/exhibition.php:8
 msgid "Exhibition"
 msgstr "Utställning"
 
-#: api-exhibition-manager.php:80
+#: api-exhibition-manager.php:88
 msgid "Exhibitions"
 msgstr "Utställningar"
 
-#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:47
+#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:68
 msgid "Add New"
 msgstr "Lägg till ny"
 
-#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:48
+#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:69
 #, php-format
 msgid "Add New %s"
 msgstr "Lägg till ny %s"
 
-#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:49
+#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:70
 #, php-format
 msgid "New %s"
 msgstr "Ny %s"
 
-#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:50
+#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:71
 #, php-format
 msgid "Edit %s"
 msgstr "Redigera %s"
 
-#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:51
+#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:72
 #, php-format
 msgid "View %s"
 msgstr "Visa %s"
 
-#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:52
+#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:73
 #, php-format
 msgid "All %s"
 msgstr "Alla %s"
 
-#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:53
+#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:74
 #, php-format
 msgid "Search %s"
 msgstr "Sök %s"
 
-#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:54
+#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:75
 #, php-format
 msgid "Parent %s:"
 msgstr "Förälder"
 
-#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:55
+#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:76
 #, php-format
 msgid "No %s found."
 msgstr "Hittade inga %s"
 
-#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:56
+#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:77
 #, php-format
 msgid "No %s found in Trash."
 msgstr "Inga #s hittades i papperskorgen"
 
-#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:57
+#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:78
 #, php-format
 msgid "Insert into %s"
 msgstr "Lägg till i %s"
 
-#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:58
+#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:79
 #, php-format
 msgid "Uploaded to this %s"
 msgstr "Uppladdad till %s"
 
-#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:59
+#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:80
 #, php-format
 msgid "Filter %s list"
 msgstr "Filtrera lista för %s"
+
+#: source/php/AcfFields/php/exhibition.php:12
+msgid "General"
+msgstr "Allmänt"
+
+#: source/php/AcfFields/php/exhibition.php:30
+msgid "Organizer"
+msgstr "Organisatör"
+
+#: source/php/AcfFields/php/exhibition.php:43
+#: source/php/AcfFields/php/exhibition.php:47
+msgid "Dunkers Kulturhus"
+msgstr "Dunkers Kulturhus"
+
+#: source/php/AcfFields/php/exhibition.php:44
+msgid "Helsingborgs Muséum"
+msgstr "Helsingborgs Muséum"
+
+#: source/php/AcfFields/php/exhibition.php:45
+msgid "Helsingborgs Konsthall"
+msgstr "Helsingborgs Konsthall"
+
+#: source/php/AcfFields/php/exhibition.php:57
+msgid "Start date"
+msgstr "Startdatum"
+
+#: source/php/AcfFields/php/exhibition.php:75
+msgid "End date"
+msgstr "Slutdatum"
+
+#: source/php/AcfFields/php/exhibition.php:93
+msgid "Description"
+msgstr "Beskrivning"
+
+#: source/php/AcfFields/php/exhibition.php:113
+msgid "Images"
+msgstr "Bilder"
+
+#: source/php/AcfFields/php/exhibition.php:141
+#: source/php/AcfFields/php/exhibition.php:159
+msgid "Opening hours"
+msgstr "Öppettider"
+
+#: source/php/AcfFields/php/exhibition.php:176
+#: source/php/AcfFields/php/exhibition.php:381
+msgid "Lägg till rad"
+msgstr ""
+
+#: source/php/AcfFields/php/exhibition.php:181
+msgid "Day(s)"
+msgstr "Dag(ar)"
+
+#: source/php/AcfFields/php/exhibition.php:194
+msgid "Monday"
+msgstr "Måndag"
+
+#: source/php/AcfFields/php/exhibition.php:195
+msgid "Tuesday"
+msgstr "Tisdag"
+
+#: source/php/AcfFields/php/exhibition.php:196
+msgid "Wednesday"
+msgstr "Onsdag"
+
+#: source/php/AcfFields/php/exhibition.php:197
+msgid "Thursday"
+msgstr "Torsdag"
+
+#: source/php/AcfFields/php/exhibition.php:198
+msgid "Friday"
+msgstr "Fredag"
+
+#: source/php/AcfFields/php/exhibition.php:199
+msgid "Saturday"
+msgstr "Lördag"
+
+#: source/php/AcfFields/php/exhibition.php:200
+msgid "Sunday"
+msgstr "Söndag"
+
+#: source/php/AcfFields/php/exhibition.php:214
+msgid "Open"
+msgstr "Öppet"
+
+#: source/php/AcfFields/php/exhibition.php:228
+msgid "Öppet"
+msgstr ""
+
+#: source/php/AcfFields/php/exhibition.php:229
+msgid "Stängt"
+msgstr ""
+
+#: source/php/AcfFields/php/exhibition.php:235
+msgid "Opens"
+msgstr "Öppnar"
+
+#: source/php/AcfFields/php/exhibition.php:261
+msgid "Closes"
+msgstr "Stänger"
+
+#: source/php/AcfFields/php/exhibition.php:289
+msgid "Location"
+msgstr "Plats"
+
+#: source/php/AcfFields/php/exhibition.php:307
+msgid "Location name"
+msgstr "Platsnamn"
+
+#: source/php/AcfFields/php/exhibition.php:327
+msgid "Address"
+msgstr "Adress"
+
+#: source/php/AcfFields/php/exhibition.php:346
+#: source/php/AcfFields/php/exhibition.php:364
+msgid "Offers"
+msgstr "Priser"
+
+#: source/php/AcfFields/php/exhibition.php:386
+msgid "Label"
+msgstr "Etikett"
+
+#: source/php/AcfFields/php/exhibition.php:407
+msgid "Free"
+msgstr "Fri entré"
+
+#: source/php/AcfFields/php/exhibition.php:421
+msgid "Yes"
+msgstr "Ja"
+
+#: source/php/AcfFields/php/exhibition.php:422
+msgid "No"
+msgstr "Nej"
+
+#: source/php/AcfFields/php/exhibition.php:428
+msgid "Amount"
+msgstr "Summa"
+
+#: source/php/AcfFields/php/exhibition.php:452
+msgid "SEK"
+msgstr "SEK"

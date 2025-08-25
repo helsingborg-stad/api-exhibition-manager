@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-08-22T12:52:42+00:00\n"
+"POT-Creation-Date: 2025-08-25T11:38:49+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: api-exhibition-manager\n"
@@ -39,74 +39,215 @@ msgstr ""
 msgid "https://github.com/helsingborg-stad"
 msgstr ""
 
-#: api-exhibition-manager.php:79
+#: api-exhibition-manager.php:87
+#: source/php/AcfFields/php/exhibition.php:8
 msgid "Exhibition"
 msgstr ""
 
-#: api-exhibition-manager.php:80
+#: api-exhibition-manager.php:88
 msgid "Exhibitions"
 msgstr ""
 
-#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:47
+#: source/php/AcfFields/php/exhibition.php:12
+msgid "General"
+msgstr ""
+
+#: source/php/AcfFields/php/exhibition.php:30
+msgid "Organizer"
+msgstr ""
+
+#: source/php/AcfFields/php/exhibition.php:43
+#: source/php/AcfFields/php/exhibition.php:47
+msgid "Dunkers Kulturhus"
+msgstr ""
+
+#: source/php/AcfFields/php/exhibition.php:44
+msgid "Helsingborgs Muséum"
+msgstr ""
+
+#: source/php/AcfFields/php/exhibition.php:45
+msgid "Helsingborgs Konsthall"
+msgstr ""
+
+#: source/php/AcfFields/php/exhibition.php:57
+msgid "Start date"
+msgstr ""
+
+#: source/php/AcfFields/php/exhibition.php:75
+msgid "End date"
+msgstr ""
+
+#: source/php/AcfFields/php/exhibition.php:93
+msgid "Description"
+msgstr ""
+
+#: source/php/AcfFields/php/exhibition.php:113
+msgid "Images"
+msgstr ""
+
+#: source/php/AcfFields/php/exhibition.php:141
+#: source/php/AcfFields/php/exhibition.php:159
+msgid "Opening hours"
+msgstr ""
+
+#: source/php/AcfFields/php/exhibition.php:176
+#: source/php/AcfFields/php/exhibition.php:381
+msgid "Lägg till rad"
+msgstr ""
+
+#: source/php/AcfFields/php/exhibition.php:181
+msgid "Day(s)"
+msgstr ""
+
+#: source/php/AcfFields/php/exhibition.php:194
+msgid "Monday"
+msgstr ""
+
+#: source/php/AcfFields/php/exhibition.php:195
+msgid "Tuesday"
+msgstr ""
+
+#: source/php/AcfFields/php/exhibition.php:196
+msgid "Wednesday"
+msgstr ""
+
+#: source/php/AcfFields/php/exhibition.php:197
+msgid "Thursday"
+msgstr ""
+
+#: source/php/AcfFields/php/exhibition.php:198
+msgid "Friday"
+msgstr ""
+
+#: source/php/AcfFields/php/exhibition.php:199
+msgid "Saturday"
+msgstr ""
+
+#: source/php/AcfFields/php/exhibition.php:200
+msgid "Sunday"
+msgstr ""
+
+#: source/php/AcfFields/php/exhibition.php:214
+msgid "Open"
+msgstr ""
+
+#: source/php/AcfFields/php/exhibition.php:228
+msgid "Öppet"
+msgstr ""
+
+#: source/php/AcfFields/php/exhibition.php:229
+msgid "Stängt"
+msgstr ""
+
+#: source/php/AcfFields/php/exhibition.php:235
+msgid "Opens"
+msgstr ""
+
+#: source/php/AcfFields/php/exhibition.php:261
+msgid "Closes"
+msgstr ""
+
+#: source/php/AcfFields/php/exhibition.php:289
+msgid "Location"
+msgstr ""
+
+#: source/php/AcfFields/php/exhibition.php:307
+msgid "Location name"
+msgstr ""
+
+#: source/php/AcfFields/php/exhibition.php:327
+msgid "Address"
+msgstr ""
+
+#: source/php/AcfFields/php/exhibition.php:346
+#: source/php/AcfFields/php/exhibition.php:364
+msgid "Offers"
+msgstr ""
+
+#: source/php/AcfFields/php/exhibition.php:386
+msgid "Label"
+msgstr ""
+
+#: source/php/AcfFields/php/exhibition.php:407
+msgid "Free"
+msgstr ""
+
+#: source/php/AcfFields/php/exhibition.php:421
+msgid "Yes"
+msgstr ""
+
+#: source/php/AcfFields/php/exhibition.php:422
+msgid "No"
+msgstr ""
+
+#: source/php/AcfFields/php/exhibition.php:428
+msgid "Amount"
+msgstr ""
+
+#: source/php/AcfFields/php/exhibition.php:452
+msgid "SEK"
+msgstr ""
+
+#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:68
 msgid "Add New"
 msgstr ""
 
-#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:48
+#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:69
 #, php-format
 msgid "Add New %s"
 msgstr ""
 
-#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:49
+#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:70
 #, php-format
 msgid "New %s"
 msgstr ""
 
-#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:50
+#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:71
 #, php-format
 msgid "Edit %s"
 msgstr ""
 
-#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:51
+#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:72
 #, php-format
 msgid "View %s"
 msgstr ""
 
-#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:52
+#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:73
 #, php-format
 msgid "All %s"
 msgstr ""
 
-#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:53
+#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:74
 #, php-format
 msgid "Search %s"
 msgstr ""
 
-#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:54
+#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:75
 #, php-format
 msgid "Parent %s:"
 msgstr ""
 
-#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:55
+#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:76
 #, php-format
 msgid "No %s found."
 msgstr ""
 
-#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:56
+#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:77
 #, php-format
 msgid "No %s found in Trash."
 msgstr ""
 
-#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:57
+#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:78
 #, php-format
 msgid "Insert into %s"
 msgstr ""
 
-#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:58
+#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:79
 #, php-format
 msgid "Uploaded to this %s"
 msgstr ""
 
-#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:59
+#: source/php/PostTypeRegistrar/PostTypeRegistrar.php:80
 #, php-format
 msgid "Filter %s list"
 msgstr ""
