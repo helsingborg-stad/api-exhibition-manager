@@ -87,5 +87,8 @@ $acfExportManager->import();
     $wpService->__('Exhibition', 'api-exhibition-manager'),
     $wpService->__('Exhibitions', 'api-exhibition-manager'),
     $wpService,
-    ['menu_icon' => 'dashicons-calendar-alt']
+    [
+        'supports' => ['title'],
+        'menu_icon' => 'dashicons-calendar-alt'
+    ]
 ))->addHooks();
