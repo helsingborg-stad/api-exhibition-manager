@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <ruleset name="Api Alarm Manager">
     <file>./source/php</file>
+    <exclude-pattern>./source/php/AcfFields/**/*</exclude-pattern>
     <rule ref="Hbg-WordPress"></rule>
     <rule ref="Generic.Files.LineLength.TooLong">
         <exclude-pattern>./source/**/*.php</exclude-pattern>

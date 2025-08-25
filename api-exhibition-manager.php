@@ -10,8 +10,12 @@
  * License URI:       https://opensource.org/licenses/MIT
  * Text Domain:       api-exhibition-manager
  * Domain Path:       /languages
+ * 
+ * phpcs:ignoreFile PSR1.Files.SideEffects.FoundWithSymbols
  */
 
+use ApiExhibitionManager\AdminAreasDisabler\AdminAreasDisabler;
+use ApiExhibitionManager\GutenbergDisabler\GutenbergDisabler;
 use ApiExhibitionManager\RedirectToRestApiOnFrontend\Redirector\Exiter\Exiter;
 use ApiExhibitionManager\RedirectToRestApiOnFrontend\Redirector\HeaderDispatcher\HeaderDispatcher;
 use ApiExhibitionManager\RedirectToRestApiOnFrontend\Redirector\Redirector;
@@ -56,6 +60,7 @@ $acfExportManager->setTextdomain('api-exhibition-manager');
 $acfExportManager->setExportFolder(APIEXHIBITIONMANAGER_PATH . 'source/php/AcfFields/');
 $acfExportManager->autoExport(array(
     // Acf fields to export, eg 'file_name' => 'group_123'
+    'exhibition' => 'group_68a837bcde3c7',
 ));
 $acfExportManager->import();
 
@@ -72,11 +77,22 @@ $wpService = new NativeWpService();
 ))->addHooks();
 
 /**
+ * Disables certain admin areas that are not relevant for this plugin.
+ */
+(new AdminAreasDisabler($wpService))->addHooks();
+
+/**
+ * Disables Gutenberg editor for all post types
+ */
+(new GutenbergDisabler($wpService))->addHooks();
+
+/**
  * Registers the exhibition post type.
  */
 (new PostTypeRegistrar(
     'exhibition',
     $wpService->__('Exhibition', 'api-exhibition-manager'),
     $wpService->__('Exhibitions', 'api-exhibition-manager'),
-    $wpService
+    $wpService,
+    ['menu_icon' => 'dashicons-calendar-alt']
 ))->addHooks();
