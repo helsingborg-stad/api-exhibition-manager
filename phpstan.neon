@@ -7,3 +7,4 @@ parameters:
 		- api-exhibition-manager.php
 	excludePaths:
 		- source/php/*/*Test.php
+		- source/php/AcfFields/*/*.php

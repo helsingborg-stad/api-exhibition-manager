@@ -29,11 +29,13 @@ if (! defined('WPINC')) {
     die;
 }
 
-define('APIEXHIBITIONMANAGER_PATH', plugin_dir_path(__FILE__));
-define('APIEXHIBITIONMANAGER_URL', plugins_url('', __FILE__));
+$wpService = new NativeWpService();
+
+define('APIEXHIBITIONMANAGER_PATH', $wpService->pluginDirPath(__FILE__));
+define('APIEXHIBITIONMANAGER_URL', $wpService->pluginsUrl('', __FILE__));
 define('APIEXHIBITIONMANAGER_TEMPLATE_PATH', APIEXHIBITIONMANAGER_PATH . 'templates/');
 
-load_plugin_textdomain('api-exhibition-manager', false, plugin_basename(dirname(__FILE__)) . '/languages');
+$wpService->loadPluginTextdomain('api-exhibition-manager', false, $wpService->pluginBasename(dirname(__FILE__)) . '/languages');
 
 // Autoload from plugin
 if (file_exists(APIEXHIBITIONMANAGER_PATH . 'vendor/autoload.php')) {
@@ -56,8 +58,6 @@ $acfExportManager->autoExport(array(
     'exhibition' => 'group_68a837bcde3c7',
 ));
 $acfExportManager->import();
-
-$wpService = new NativeWpService();
 
 /**
  * Redirects users to the WordPress REST API URL if they are not in the admin area
