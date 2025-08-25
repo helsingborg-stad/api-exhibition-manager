@@ -49,8 +49,9 @@ class RedirectToRestApiOnFrontend implements HookableInterface
 
         // Normalize both URIs for comparison
         $normalizedRequestUri  = rtrim($requestUri, '/');
-        $parsedUrl             = parse_url($requestUri, PHP_URL_PATH) ?: '';
-        $normalizedRestApiBase = rtrim($parsedUrl, '/');
+        $parsedRestApiBase     = parse_url($restApiBase, PHP_URL_PATH);
+        $parsedRestApiBase     = is_string($parsedRestApiBase) ? $parsedRestApiBase : '';
+        $normalizedRestApiBase = rtrim($parsedRestApiBase, '/');
 
         // If already visiting REST API or its sub-routes, do nothing
         if (strpos($normalizedRequestUri, $normalizedRestApiBase) === 0) {
