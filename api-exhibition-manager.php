@@ -56,6 +56,7 @@ $acfExportManager->setTextdomain('api-exhibition-manager');
 $acfExportManager->setExportFolder(APIEXHIBITIONMANAGER_PATH . 'source/php/AcfFields/');
 $acfExportManager->autoExport(array(
     // Acf fields to export, eg 'file_name' => 'group_123'
+    'exhibition' => 'group_68a837bcde3c7',
 ));
 $acfExportManager->import();
 
