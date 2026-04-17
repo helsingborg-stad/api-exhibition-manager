@@ -49,6 +49,8 @@
             'ui' => 0,
             'ajax' => 0,
             'placeholder' => '',
+            'create_options' => 0,
+            'save_options' => 0,
         ),
         2 => array(
             'key' => 'field_68ac00ccb5b3e',
@@ -67,6 +69,7 @@
             'display_format' => 'Y-m-d',
             'return_format' => 'Y-m-d',
             'first_day' => 1,
+            'default_to_current_date' => 0,
         ),
         3 => array(
             'key' => 'field_68ac0124b5b3f',
@@ -85,6 +88,7 @@
             'display_format' => 'Y-m-d',
             'return_format' => 'Y-m-d',
             'first_day' => 1,
+            'default_to_current_date' => 0,
         ),
         4 => array(
             'key' => 'field_68ac003ab5b3c',
@@ -101,8 +105,9 @@
                 'id' => '',
             ),
             'default_value' => '',
+            'allow_in_bindings' => 1,
             'tabs' => 'all',
-            'toolbar' => 'basic',
+            'toolbar' => 'full',
             'media_upload' => 0,
             'delay' => 0,
         ),
@@ -206,6 +211,8 @@
                     'ajax' => 0,
                     'placeholder' => '',
                     'parent_repeater' => 'field_68ac0c15245c6',
+                    'create_options' => 0,
+                    'save_options' => 0,
                 ),
                 1 => array(
                     'key' => 'field_68ac0d44993ef',
@@ -486,5 +493,6 @@
     'active' => true,
     'description' => '',
     'show_in_rest' => 1,
+    'display_title' => '',
 ));
 }
